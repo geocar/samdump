@@ -1,0 +1,87 @@
+mkntpw.c is redistributable under the terms of the GNU Public License.
+	(see COPYING.GPL for more information)
+
+Sadly, samdump isn't under the GPL.
+
+The only common licenses are:
+	* Copyrights must be kept intact (1.1, 3.4)
+	* Noncommercial distribution only (1.2, 3.1)
+	* Source must be available (3.2, 3.3)
+
+Some parts of varying licenses attempted to cover other people's code. I've gone
+through as much as I can and I believe the following copyrights apply to
+the various places.
+
+The code written by Internet Connection is deliberately under the GPL. If you
+can convince the other copyright holders to give up a GPL license, this file
+will be replaced with the GNU Public License.
+
+
+
+pwdump.c is:
+	Copyright (c) 2004 Internet Connection, gpl@internetconnection.net
+
+pwdump.c borrows a significant amount of code from:
+	[1] Nicola Cuomo, ncuomo@studenti.unina.it (SYSKEY handling)
+	[2] Jeremy Allison, jra@cygnus.com (Original NT Password Dump)
+
+ntreg.[ch] and sam.h is the offline registry edit library:
+	[3] Copyright (c) 1997-2004 Petter Nordahl-Hagen, pnordahl@eunet.no
+
+OpenSSL (MD4, MD5, RC4, DES) is required, and:
+	Copyright (c) 1998-2000 The OpenSSL Project.
+	Copyright (c) 1995-1998 Eric Young, eay@cryptsoft.com
+
+---- [1]
+ *
+ * Bkhive is  free  software, so you are free to copy, distribute, use
+ * the work under the following condition
+ *
+ * You must give the original author credit.
+ * You may not use this work for commercial purposes.
+ *
+ *
+ * Samdump2 is  free  software, so you are free to copy, distribute, use
+ * the work under the following condition
+ *
+ * <1> You must give the original author credit.
+ * <2> You may not use this work for commercial purposes.
+ *
+---- [2]
+ *
+ * (C) Jeremy Allison 1997. All rights reserved.
+ *
+ * This program is free for commercial and non-commercial use.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted.
+ *
+---- [3]
+ *
+ * Copyright information & credits for:
+ * chntpw binary
+ * chntpw source
+ * ntreg source (registry edit library)
+ * is Copyright (c) 1997-2004 Petter Nordahl-Hagen, pnordahl@eunet.no
+ *                                                                                 
+ * Rules (someone calls it license):
+ * The chntpw binary & source can be both changed and distributed
+ * by anyone in any way they like if:
+ * 1) No one makes money on it (commercial sales is a big NONO)
+ *  except: a) Charging for media/packaging/printed docs/support/shipping
+ *             is allowed.
+ *          b) Inclusion in typical linux, *bsd or similar OS
+ *             distributions (also commercial)
+ *             is allowed as long as use of chntpw & ntreg is
+ *             not the distributions primary purpose. Anyway it's
+ *             nice if I get notified any such inclusion.
+ * 2) The source must be available (at least as an option)
+ * 3) The changed program also follows these rules.
+ * 4) As long as code written by me is included, it must give me credit,
+ *    at least in the source code and docs.
+ *                                                                                 
+ * If you ask I will very likely allow other types of distribution.
+ * (have already had questions of it as a bonus on eBay auctions.
+ *  ask, and you will likely get permission)
+ * I'm just a kind of control freak, so I want to know what's going on.
+ *

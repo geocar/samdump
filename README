@@ -1,0 +1,40 @@
+samdump produces a smbpasswd(5) file from a copy of the NT registry. it supports
+SYSKEY, LanMan, and the NT-password schemes. The resulting files are compatible
+with Samba and can be used to authenticate the original users.
+
+samdump might work under windows. It won't work with the LIVE registry.
+It won't work on platforms that are little-endian (although it could be ported
+to)
+
+samdump requires an OFFLINE copy of the registry. You can use NTBACKUP and
+mtftar to get one.
+
+---
+
+step 0: edit Makefile to get access to your OpenSSL libs and includes directory,
+	make, and install the resulting samdump tool in the location of your
+	choosing.
+
+step 1: create a backup of the System State with the NTBACKUP.EXE tool
+
+step 2: unpack the registry
+
+	$ mtftar "System State/Registry//" < storage.bkf > registry.tar
+
+step 3: untar the registry (someplace)
+
+step 4: run samdump on the registry files:
+
+	$ samdump /path/to/registry/* > smbpasswd.txt
+
+step 5: make use of your new smbpasswd file with Samba.
+
+---
+
+samdump is especially useful in migrating a series of standalone NT or WIN2K
+systems to a Samba-controlled domain. it could also be used to migrate
+standalone NT or WIN2K systems to a Active-Directory-controlled domain.
+
+the resulting files still would need to be filtered with awk, sort, and uniq to
+make sure each user has a unique RID (and if there WERE any collisions, then
+permissions might need to be fixed-up after membership changes)

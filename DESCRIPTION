@@ -1,0 +1,2 @@
+Extracts a Samba-style smbpasswd file directly from an offline copy of the
+SAM database.

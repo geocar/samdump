@@ -1,0 +1,19 @@
+2007-01-10 16:12  geocar
+
+	* pwdump.c: gcc4 fixes
+
+2005-07-18 06:37  geocar
+
+	* COPYING, COPYING.GPL, Makefile, mkntpw.c, pwdump.c: nt password
+	  generator, license clarifications, removing dead code
+
+2004-10-27 18:06  geocar
+
+	* COPYING, Makefile, README, ntreg.c, ntreg.h, pwdump.c, sam.h:
+	  Initial revision
+
+2004-10-27 18:06  geocar
+
+	* COPYING, Makefile, README, ntreg.c, ntreg.h, pwdump.c, sam.h:
+	  Loaded into CVS
+
